@@ -162,5 +162,6 @@ int main()
         cout << recursia(str, 0);
     else
         cout << "Error";
+cout << 15;
     return 0;
 }
