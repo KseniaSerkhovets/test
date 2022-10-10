@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1665376362 source:c:\c_prog\calculators\calculator3\calculator3_5\src\number.cpp
+	"Number.h"
+
+1665379564 c:\c_prog\calculators\calculator3\calculator3_5\include\number.h
+
+1665379643 source:c:\c_prog\calculators\calculator3\calculator3_5\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Number.h"
+	"Number_of_operators.h"
+
+1665378123 source:c:\c_prog\calculators\calculator3\calculator3_5\src\number_of_operators.cpp
+	"Number_of_operators.h"
+
+1665378638 c:\c_prog\calculators\calculator3\calculator3_5\include\number_of_operators.h
+
