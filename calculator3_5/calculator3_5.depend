@@ -16,3 +16,15 @@
 
 1665378638 c:\c_prog\calculators\calculator3\calculator3_5\include\number_of_operators.h
 
+1665379643 source:c:\users\38099\git\test\calculator3_5\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Number.h"
+	"Number_of_operators.h"
+
+1665378123 source:c:\users\38099\git\test\calculator3_5\src\number_of_operators.cpp
+	"Number_of_operators.h"
+
+1665378638 c:\users\38099\git\test\calculator3_5\include\number_of_operators.h
+

@@ -2,20 +2,11 @@
 #include <fstream>
 #include <string>
 
-#include "Number.h"
 #include "Number_of_operators.h"
+#include "ExtractorOperands.h"
+#include "constants.h"
 
 using namespace std;
-
-enum Operator
-{
-    PLUS_SIGN = '+',
-    MINUS_SIGN = '-',
-    MULTIPLY_SIGN = '*',
-    DIVIDE_SIGN = '/',
-    OPENING_BRACKET = '(',
-    CLOSING_BRACKET = ')',
-};
 
 string del(string s)
 {
@@ -69,58 +60,24 @@ bool validations(string s)
     return false;
 }
 
-Number a;
-Number b;
-
-void operator_extraction(string s, int n)
-{
-    a.znak = 1;
-    b.znak = 1;
-    if(s[n + 1] == MINUS_SIGN)
-    {
-        b.znak = -1;
-        s = s.replace(n + 1, 1, "");
-    }
-    a.start = n - 1;
-    b.finish = n + 1;
-    while((a.start > 0) && (isdigit(s[a.start])))
-    {
-        if (isdigit(s[a.start - 1]))
-            a.start--;
-        else
-            break;
-    }
-    string a_s = s.substr(a.start, n - a.start);
-    a.nomer = stoi(a_s);
-    if((a.start > 0) && (s[a.start - 1] == MINUS_SIGN))
-    {
-        a.start--;
-        a.znak = -1;
-    }
-    while((b.finish < s.size() - 1) && (isdigit(s[b.finish])))
-    {
-        if (isdigit(s[b.finish + 1]))
-            b.finish++;
-        else
-            break;
-    }
-    string b_s = s.substr(n + 1, b.finish - n );
-    b.nomer = stoi(b_s);
-}
 
 string operation(string s, int n)
 {
-    operator_extraction(s, n);
+    ExtractorOperands extractor = ExtractorOperands(s, n);
+    Operands operands = extractor.operator_extraction();
+    int a = operands.a;
+    int b = operands.b;
+
     int answer;
     switch(s[n])
     {
         case DIVIDE_SIGN:
             try
             {
-                if (b.nomer == 0)
+                if (b == 0)
                     throw runtime_error("Division by zero");
 
-                answer = (a.nomer * a.znak) / (b.nomer * b.znak);
+                answer = a / b;
             }
             catch(runtime_error e)
             {
@@ -128,16 +85,16 @@ string operation(string s, int n)
             }
         break;
         case MULTIPLY_SIGN:
-            answer = (a.nomer * a.znak) * (b.nomer * b.znak);
+            answer = a * b;
         break;
         case PLUS_SIGN:
-            answer = (a.nomer * a.znak) + (b.nomer * b.znak);
+            answer = a + b;
             break;
         case MINUS_SIGN:
-            answer = (a.nomer * a.znak) - (b.nomer * b.znak);
+            answer = a - b;
             break;
     }
-    return s.replace(a.start, b.finish - a.start + 1, to_string(answer));
+    return s.replace(operands.start, operands.finish - operands.start + 1, to_string(answer));
 }
 
 string doing_operations(string nom, int oper, Operator a, Operator b)

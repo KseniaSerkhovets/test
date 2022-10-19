@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -23,7 +24,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/ExtractorOperands.h" />
+		<Unit filename="include/Number_of_operators.h" />
+		<Unit filename="include/constants.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="main.cpp" />
+		<Unit filename="src/ExtractorOperands.cpp" />
+		<Unit filename="src/Number_of_operators.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
