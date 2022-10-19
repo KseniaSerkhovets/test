@@ -12,4 +12,5 @@ enum Operator
     CLOSING_BRACKET = ')',
 };
 
+
 #endif // CONSTANTS_H_INCLUDED

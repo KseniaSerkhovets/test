@@ -16,12 +16,10 @@
 
 1665378638 c:\c_prog\calculators\calculator3\calculator3_5\include\number_of_operators.h
 
-1665379643 source:c:\users\38099\git\test\calculator3_5\main.cpp
+1666202528 source:c:\users\38099\git\test\calculator3_5\main.cpp
 	<iostream>
-	<fstream>
-	<string>
-	"Number.h"
-	"Number_of_operators.h"
+	"FileHandler.h"
+	"ConsoleHandler.h"
 
 1665378123 source:c:\users\38099\git\test\calculator3_5\src\number_of_operators.cpp
 	"Number_of_operators.h"
@@ -49,4 +47,77 @@
 
 1666183352 source:c:\projects\test\calculator3_5\src\extractoroperands.cpp
 	"ExtractorOperands.h"
+
+1666184136 c:\users\38099\git\test\calculator3_5\include\extractoroperands.h
+	"constants.h"
+	<string>
+
+1666201338 c:\users\38099\git\test\calculator3_5\include\constants.h
+
+1666197029 source:c:\users\38099\git\test\calculator3_5\src\executor.cpp
+	"Executor.h"
+
+1666197012 c:\users\38099\git\test\calculator3_5\include\executor.h
+	<string>
+	<iostream>
+	"constants.h"
+	"ExtractorOperands.h"
+
+1666195015 source:c:\users\38099\git\test\calculator3_5\src\extractoroperands.cpp
+	"ExtractorOperands.h"
+
+1666198168 source:c:\users\38099\git\test\calculator3_5\src\simplefier.cpp
+	"Simplefier.h"
+
+1666198168 c:\users\38099\git\test\calculator3_5\include\simplefier.h
+	"Executor.h"
+	"constants.h"
+	<string>
+
+1666199456 c:\users\38099\git\test\calculator3_5\include\bracketsopener.h
+	"Simplefier.h"
+	"constants.h"
+	<string>
+
+1666200068 source:c:\users\38099\git\test\calculator3_5\src\bracketsopener.cpp
+	"BracketsOpener.h"
+
+1666201065 c:\users\38099\git\test\calculator3_5\include\validator.h
+	"constants.h"
+	<string>
+
+1666200998 source:c:\users\38099\git\test\calculator3_5\src\validator.cpp
+	"Validator.h"
+
+1666201338 source:c:\users\38099\git\test\calculator3_5\src\cleaner.cpp
+	"Cleaner.h"
+
+1666201343 c:\users\38099\git\test\calculator3_5\include\cleaner.h
+	<string>
+
+1666201397 source:c:\users\38099\git\test\calculator3_5\src\basehandler.cpp
+	"BaseHandler.h"
+
+1666202061 c:\users\38099\git\test\calculator3_5\include\basehandler.h
+
+1666202567 c:\users\38099\git\test\calculator3_5\include\filehandler.h
+	<iostream>
+	<fstream>
+	<string>
+	"BracketsOpener.h"
+	"Validator.h"
+	"Cleaner.h"
+	"constants.h"
+
+1666202528 c:\users\38099\git\test\calculator3_5\include\consolehandler.h
+	<iostream>
+	<fstream>
+	<string>
+	"BracketsOpener.h"
+	"Validator.h"
+	"Cleaner.h"
+	"constants.h"
+
+1666202349 source:c:\users\38099\git\test\calculator3_5\src\consolehandler.cpp
+	"ConsoleHandler.h"
 

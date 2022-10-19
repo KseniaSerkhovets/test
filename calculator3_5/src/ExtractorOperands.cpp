@@ -8,7 +8,7 @@ ExtractorOperands::ExtractorOperands(string s1, int n1)
 
 ExtractorOperands::~ExtractorOperands()
 {
-    //dtor
+
 }
 
 void ExtractorOperands::define_right_sign()

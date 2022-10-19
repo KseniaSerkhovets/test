@@ -24,14 +24,28 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/BaseHandler.h" />
+		<Unit filename="include/BracketsOpener.h" />
+		<Unit filename="include/Cleaner.h" />
+		<Unit filename="include/ConsoleHandler.h" />
+		<Unit filename="include/Executor.h" />
 		<Unit filename="include/ExtractorOperands.h" />
-		<Unit filename="include/Number_of_operators.h" />
+		<Unit filename="include/FileHandler.h" />
+		<Unit filename="include/Simplefier.h" />
+		<Unit filename="include/Validator.h" />
 		<Unit filename="include/constants.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.cpp" />
+		<Unit filename="src/BaseHandler.cpp" />
+		<Unit filename="src/BracketsOpener.cpp" />
+		<Unit filename="src/Cleaner.cpp" />
+		<Unit filename="src/ConsoleHandler.cpp" />
+		<Unit filename="src/Executor.cpp" />
 		<Unit filename="src/ExtractorOperands.cpp" />
-		<Unit filename="src/Number_of_operators.cpp" />
+		<Unit filename="src/FileHandler.cpp" />
+		<Unit filename="src/Simplefier.cpp" />
+		<Unit filename="src/Validator.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
