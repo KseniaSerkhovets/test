@@ -28,3 +28,25 @@
 
 1665378638 c:\users\38099\git\test\calculator3_5\include\number_of_operators.h
 
+1666182601 source:c:\projects\test\calculator3_5\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Number_of_operators.h"
+	"ExtractorOperands.h"
+	"constants.h"
+
+1666182601 c:\projects\test\calculator3_5\include\number_of_operators.h
+
+1666183161 c:\projects\test\calculator3_5\include\extractoroperands.h
+	"constants.h"
+	<string>
+
+1666182601 c:\projects\test\calculator3_5\include\constants.h
+
+1666182601 source:c:\projects\test\calculator3_5\src\number_of_operators.cpp
+	"Number_of_operators.h"
+
+1666183352 source:c:\projects\test\calculator3_5\src\extractoroperands.cpp
+	"ExtractorOperands.h"
+

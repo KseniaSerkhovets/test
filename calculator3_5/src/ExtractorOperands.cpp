@@ -2,8 +2,8 @@
 
 ExtractorOperands::ExtractorOperands(string s1, int n1)
 {
-    //this->n = n1;
-    //this->s = s1;
+    this->n = n1;
+    this->s = s1;
 }
 
 ExtractorOperands::~ExtractorOperands()
@@ -57,14 +57,14 @@ void ExtractorOperands::define_right_operand()
     this->b.nomer = stoi(b_s);
 }
 
-void ExtractorOperands::operator_extraction()
+Operands ExtractorOperands::operator_extraction()
 {
     this->define_left_operand();
     this->define_left_sign();
     this->define_right_sign();
     this->define_right_operand();
-    return Operands(this->a.nomer * this-> a.znak, this->b.nomer * this->b.znak,
-                    this->a.start, this->b.finish);
+    return Operands{this->a.nomer * this-> a.znak, this->b.nomer * this->b.znak,
+                    this->a.start, this->b.finish};
 }
 
 

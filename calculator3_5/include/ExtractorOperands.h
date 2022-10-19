@@ -3,30 +3,29 @@
 #include "constants.h"
 #include <string>
 
-struct
+using namespace std;
+
+struct Number
 {
     int nomer;
     int start;
     int znak;
     int finish;
-}Number;
+};
 
-struct
+struct Operands
 {
     int a;
     int b;
     int start;
     int finish;
-}Operands;
+};
 
 class ExtractorOperands
 {
+
     public:
-        ExtractorOperands(string s1, int n1)
-        {
-            s = s1;
-            n = n1;
-        }
+        ExtractorOperands(string s, int n);
         ~ExtractorOperands();
         Operands operator_extraction();
 
