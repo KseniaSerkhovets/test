@@ -136,6 +136,7 @@
     <ClCompile Include="FileHandler.cpp" />
     <ClCompile Include="NewCalculator.cpp" />
     <ClCompile Include="Simplefier.cpp" />
+    <ClCompile Include="TrigonometryCounter.cpp" />
     <ClCompile Include="Validator.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +150,7 @@
     <ClInclude Include="FileHandler.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Simplefier.h" />
+    <ClInclude Include="TrigonometryCounter.h" />
     <ClInclude Include="Validator.h" />
   </ItemGroup>
   <ItemGroup>

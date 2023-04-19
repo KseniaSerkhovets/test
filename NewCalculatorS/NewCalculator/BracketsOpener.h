@@ -3,6 +3,7 @@
 
 #include "Simplefier.h"
 #include "constants.h"
+#include "TrigonometryCounter.h"
 
 #include <string>
 

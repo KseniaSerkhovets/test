@@ -13,7 +13,17 @@ BracketsOpener::~BracketsOpener()
 string BracketsOpener::remove_brackets(string s, int start, int finish, string number)
 {
     if ((start > 0) && (s[start - 1] == OPENING_BRACKET))
-        return s.replace(start - 1, finish - start + 3, number);
+    {
+        if ((start > 1) && (s[start - 2] > 97))
+        {
+            TrigonometryCounter ko = TrigonometryCounter();
+            return ko.TrigonometryCounting(number, s, start - 1, finish + 1);
+        }
+        else
+        {
+            return s.replace(start - 1, finish - start + 3, number);
+        }
+    }
     return s.replace(start, finish - start + 1, number);
 }
 
