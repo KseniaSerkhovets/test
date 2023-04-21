@@ -11,6 +11,7 @@ struct SearchData
     string str;
     double number;
     double answer;
+    int ranswer;
 };
 
 class TrigonometryCounter
@@ -19,7 +20,7 @@ public:
     TrigonometryCounter();
     ~TrigonometryCounter();
     SearchData n;
-    string TrigonometryCounting(string s, string k, int start, int finish);
+    string TrigonometryCounting(string s, string k, int *start, int finish);
 protected:
 
 private:

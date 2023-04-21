@@ -19,7 +19,7 @@ public:
 protected:
 
 private:
-    string remove_brackets(string s, int start, int finish, string number);
+    string remove_brackets(string s, int *start, int finish, string number);
 };
 
 #endif // BRACKETSOPENER_H

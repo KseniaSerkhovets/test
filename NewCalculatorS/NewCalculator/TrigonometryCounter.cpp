@@ -1,4 +1,5 @@
 #include "TrigonometryCounter.h"
+#include <iostream>
 
 TrigonometryCounter::TrigonometryCounter()
 {
@@ -10,23 +11,31 @@ TrigonometryCounter::~TrigonometryCounter()
     //dtor
 }
 
-string TrigonometryCounter::TrigonometryCounting(string s, string k, int start, int finish)
+string TrigonometryCounter::TrigonometryCounting(string s, string k, int *start, int finish)
 {
     this->n.number = stoi(k);
-    if (s[start - 1] == 'n')
+    if (s[(*start) - 1] == 'n')
     {
+        *start = *start - 3;
         this->n.answer = sin(this->n.number);
-        s = s.replace(start - 3, finish - start + 4, to_string(round(this->n.answer)));
+        this->n.ranswer = round(this->n.answer);
+        s = s.replace(*start, finish - (*start) + 1, to_string(this->n.ranswer));
     }
-    if (s[start - 1] == 's')
-    {
-        this->n.answer = sin(this->n.number);
-        s = s.replace(start - 3, finish - start + 4, to_string(round(this->n.answer)));
-    }
-    if (s[start - 1] == 'g')
-    {
-        this->n.answer = sin(this->n.number);
-        s = s.replace(start - 2, finish - start + 3, to_string(round(this->n.answer)));
-    }
+    else
+         if (s[(*start) - 1] == 's')
+        {
+             *start = (*start) - 3;
+            this->n.answer = cos(this->n.number);
+            this->n.ranswer = round(this->n.answer);
+            s = s.replace(*start, finish - (*start) + 1, to_string(this->n.ranswer));
+        }
+        else
+            if (s[(*start) - 1] == 'g')
+            {
+                *start = (*start) - 2;
+                this->n.answer = tan(this->n.number);
+                this->n.ranswer = round(this->n.answer);
+                s = s.replace(*start, finish - (*start) + 1, to_string(this->n.ranswer));
+            }
     return s;
 }
