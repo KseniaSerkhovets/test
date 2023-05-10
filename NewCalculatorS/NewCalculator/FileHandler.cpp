@@ -37,8 +37,6 @@ void FileHandler::handle()
                 BracketsOpener bo = BracketsOpener();
                 output << bo.recursia(str, 0) << endl;
             }
-            else
-                output << "Error" << endl;
         }
         else
             output << endl;
