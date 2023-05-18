@@ -22,7 +22,6 @@ private:
     bool validation2();
     bool LookingForBracketsProblem();
     bool LookingForNotAllowedSynbols();
-    bool LookingForNotAllowedWords();
     string s;
 };
 

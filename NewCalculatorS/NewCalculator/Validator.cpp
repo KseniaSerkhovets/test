@@ -56,7 +56,8 @@ bool Validator::validation2()
 bool Validator::LookingForNotAllowedSynbols()
 {
     smatch match;
-    regex not_allowed_symbols("[^0-9^\\)^\\(^\\+^\\-^\\/^\\*^(sincostg)]");
+    regex not_allowed_symbols("(^|[\\+\\*/-\\(\\d])(?!(sin|cos|tan)\\()[A-Za-z]+");
+
     if (regex_search(this->s, match, not_allowed_symbols))
     {
         cout << "Error: Symbol " << match.str() << " is not allowed!" << endl;
@@ -64,22 +65,16 @@ bool Validator::LookingForNotAllowedSynbols()
     }
     return true;
 }
-
+/*
 bool Validator::LookingForNotAllowedWords()
 {
     smatch match;
+    regex numb_4("(^|[\\+\\*\\/-\\(\\d])(?!(sin|cos|tan)\\()[A-Za-z]+");
+    
     regex not_allowed_letters1("\w(?=(sin|cos|tg))");
     regex not_allowed_letters2("(?>(sin|cos|tg))\w");
     regex not_allowed_letters3("\w");
 
-    if (regex_search(this->s, match, not_allowed_letters3)
-    {
-        if ((match.str().size() <= 1) && (match.str().size() >= 4))
-        {
-            cout << "Error: 1 " << match.str() << " ." << endl;
-            return false;
-        }
-    }
     if (regex_search(this->s, match, not_allowed_letters1))
     {
         cout << "Error: 1 " << match.str() << " ." << endl;
@@ -87,18 +82,32 @@ bool Validator::LookingForNotAllowedWords()
     }
     if (regex_search(this->s, match, not_allowed_letters2))
     {
-        cout << "Error: 1 " << match.str() << " ." << endl;
+        cout << "Error: 2 " << match.str() << " ." << endl;
             return false;
+    }
+    if (regex_search(this->s, match, not_allowed_letters3))
+    {
+        if ((match.str().size() <= 1) && (match.str().size() >= 4))
+        {
+            cout << "Error: 3 " << match.str() << " ." << endl;
+            return false;
+        }
+    }
+
+
+    if (regex_search(this->s, match, numb_4))
+    {
+        cout << "Error: 2 " << match.str() << " ." << endl;
+        return false;
     }
 
     return true;
 }
-
+*/
 
 bool Validator::validations()
 {
-    if ((this->LookingForBracketsProblem()) && (this->validation2()) && (this->LookingForNotAllowedSynbols())
-        && (LookingForNotAllowedWords()))
+    if ((this->LookingForBracketsProblem()) && (this->validation2()) && (this->LookingForNotAllowedSynbols()))
         return true;
     return false;
 }
