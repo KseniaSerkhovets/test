@@ -4,6 +4,8 @@
 #include "constants.h"
 
 #include <string>
+#include <iostream>
+#include <regex>
 
 using namespace std;
 
@@ -17,8 +19,9 @@ public:
 protected:
 
 private:
-    bool validation1();
     bool validation2();
+    bool LookingForBracketsProblem();
+    bool LookingForNotAllowedSynbols();
     string s;
 };
 

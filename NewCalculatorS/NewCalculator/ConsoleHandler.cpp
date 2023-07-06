@@ -29,8 +29,6 @@ void ConsoleHandler::handle()
                     BracketsOpener bo = BracketsOpener();
                     cout << bo.recursia(str, 0) << endl;
                 }
-                else
-                    cout << "Error" << endl;
             }
 
         }
