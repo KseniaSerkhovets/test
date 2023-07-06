@@ -1,1 +1,5 @@
-﻿  NewCalculator.vcxproj -> C:\C_prog\NewCalculatorS\x64\Debug\NewCalculator.exe
+﻿  TrigonometryCounter.cpp
+C:\C_prog\New\NewCalculatorS\NewCalculator\TrigonometryCounter.cpp(21,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\C_prog\New\NewCalculatorS\NewCalculator\TrigonometryCounter.cpp(29,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\C_prog\New\NewCalculatorS\NewCalculator\TrigonometryCounter.cpp(37,40): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  NewCalculator.vcxproj -> C:\C_prog\New\NewCalculatorS\x64\Debug\NewCalculator.exe

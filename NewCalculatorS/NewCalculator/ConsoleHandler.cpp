@@ -30,7 +30,7 @@ void ConsoleHandler::handle()
                     cout << bo.recursia(str, 0) << endl;
                 }
                 else
-                    cout << "Error";
+                    cout << "Error" << endl;
             }
 
         }
